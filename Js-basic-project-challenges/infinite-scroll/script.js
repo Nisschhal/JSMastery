@@ -4,7 +4,8 @@ import { UNSPLASH_API_KEY } from "../../keys.js";
 const imageContainer = document.getElementById("image-container");
 const loaderEl = document.getElementById("loader");
 console.log(imageContainer.children);
-const unSplashAPI = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_API_KEY}&count=10
+let count = 5;
+let unSplashAPI = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_API_KEY}&count=${count}
 `;
 
 let photos = [];
@@ -15,6 +16,7 @@ const get10Photos = async () => {
     const res = await fetch(unSplashAPI);
     console.log(res);
     photos = await res.json();
+    count = 10;
   } catch (err) {
     console.log(err.message);
   }
@@ -70,11 +72,4 @@ window.addEventListener("scroll", (e) => {
     get10Photos();
     displayPhotos();
   }
-  //   console.log("inner height", window.innerHeight);
-  //   console.log("scrollY", window.scrollY);
-  //   console.log(window.innerHeight + window.scrollY);
-  //   console.log("offset", document.body.offsetHeight);
 });
-// window.addEventListener("click", (e) =>
-//   console.log(e.clientX, document.body.offsetHeight)
-// );
