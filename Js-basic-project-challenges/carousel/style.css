@@ -27,3 +27,81 @@ body {
   color: #343a40;
   border-bottom: 10px solid #087f5b;
 }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 800px;
+  margin: 100px auto;
+  background-color: #087f5b;
+  color: #e6fcf5;
+  padding: 24px;
+  padding-left: 86px;
+  border-radius: 12px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.carousel__image {
+  border-radius: 12px;
+}
+
+.carousel img {
+  height: 200px;
+  transform: scale(1.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.76);
+}
+.carousel__text-box--msg {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.carousel__text-box--author {
+  color: #c3fae8;
+  font-size: 16px;
+}
+
+.carousel__btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  stroke: #087f5b;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.192);
+}
+
+.btn-right {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.btn-left {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 32px);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.dot-fill {
+  background-color: #087f5b;
+}
